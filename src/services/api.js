@@ -2,7 +2,7 @@ import axios from 'axios';
 import { langColors } from './config';
 
 const api = axios.create({
-  baseURL: 'https://api.github.com/',
+  baseURL: process.env.REACT_APP_API_BASE_URL,
 });
 export const getUser = async (login) => api.get(`/users/${login}`);
 
